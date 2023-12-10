@@ -3,18 +3,21 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExcelViz Pro</title>
+    <title>ExcelViz Pro - Visualizer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* Additional styles for the visualizer page */
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f4; /* Light background color */
+            color: #333; /* Dark text color */
         }
 
+        /* Header styles */
         .sub-header {
-            background: rgba(51, 51, 51, 0.7);
+            background: #292b2c; /* Dark background color */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -30,7 +33,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            background: rgba(51, 51, 51, 0.7);
+            background: #292b2c; /* Dark background color */
             top: 80px;
             right: -200px;
             width: 150px;
@@ -47,7 +50,7 @@
         }
 
         .nav-links a:hover {
-            background: #555;
+            background: #414243; /* Slightly lighter background color on hover */
         }
 
         .fa-bars, .fa-close {
@@ -56,22 +59,23 @@
             cursor: pointer;
         }
 
+        /* Visualizer container styles */
         .visualizer-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 80vh; /* Adjusted height for better visibility */
+            text-align: center;
         }
 
         .open-visualizer-btn {
             cursor: pointer;
-            background: #4CAF50;
+            background: #5cb85c; /* Green color */
             color: white;
-            padding: 15px;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
             font-size: 18px;
-            margin-top: 20px;
             text-decoration: none;
             display: inline-block;
             transition: background 0.3s ease-in-out;
@@ -81,9 +85,7 @@
         }
 
         .open-visualizer-btn:hover {
-            background: #45a049;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
+            background: #4cae4c; /* Darker green color on hover */
         }
 
         .button-flare {
@@ -104,13 +106,16 @@
             height: 450px;
         }
 
+        /* Information Section styles */
         .info-section {
             padding: 30px;
             text-align: center;
         }
 
+        /* Contact Section styles */
         .contact-section {
-            background: rgba(0, 0, 0, 0.7);
+            background: #292b2c; /* Dark background color */
+            color: white;
             padding: 50px 0;
             text-align: center;
         }
@@ -149,6 +154,7 @@
             text-decoration: none;
         }
 
+        /* Responsive styles */
         @media only screen and (max-width: 768px) {
             .nav-links {
                 right: -100%;
@@ -170,6 +176,7 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <section class="sub-header">
         <nav>
             <a href="index.html"><img src="images/logo.png"></a>
@@ -189,7 +196,7 @@
         <h1>Spreadsheet Visualizer</h1>
     </section>
 
-    <!-- Button Directing to the Link -->
+    <!-- Visualizer Container -->
     <div class="visualizer-container">
         <a href="https://excelvizpro1234.streamlit.app/" class="open-visualizer-btn">
             Open Visualizer
@@ -247,4 +254,3 @@
 </body>
 
 </html>
-
