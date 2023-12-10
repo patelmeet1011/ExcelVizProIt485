@@ -6,174 +6,7 @@
     <title>ExcelViz Pro - Visualizer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-size: cover;
-            color: #333; /* Dark text color */
-        }
-
-        /* Header styles */
-        .sub-header {
-            background: #292b2c; /* Dark background color */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            background: #292b2c; /* Dark background color */
-            top: 80px;
-            right: -200px;
-            width: 150px;
-            text-align: center;
-            border-radius: 5px;
-            transition: right 0.3s ease-in-out;
-        }
-
-        .nav-links a {
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            display: block;
-        }
-
-        .nav-links a:hover {
-            background: #414243; /* Slightly lighter background color on hover */
-        }
-
-        .fa-bars, .fa-close {
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        /* Visualizer container styles */
-        .visualizer-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh; /* Adjusted height for better visibility */
-            text-align: center;
-            background: url('https://source.unsplash.com/1920x1080/?IT') no-repeat center center fixed;
-        }
-
-        .open-visualizer-btn {
-            cursor: pointer;
-            background: #5cb85c; /* Green color */
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .open-visualizer-btn:hover {
-            background: #4cae4c; /* Darker green color on hover */
-        }
-
-        .button-flare {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            transition: width 0.3s ease-out, height 0.3s ease-out;
-        }
-
-        .open-visualizer-btn:hover .button-flare {
-            width: 200%;
-            height: 450px;
-        }
-
-        /* Information Section styles */
-        .info-section {
-            padding: 30px;
-            text-align: center;
-        }
-
-        /* Contact Section styles */
-        .contact-section {
-            background: #292b2c; /* Dark background color */
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .contact-info div {
-            flex: 1;
-            max-width: 300px;
-        }
-
-        .contact-info i {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        /* Responsive styles */
-        @media only screen and (max-width: 768px) {
-            .nav-links {
-                right: -100%;
-            }
-
-            .fa-bars {
-                display: block;
-            }
-
-            .fa-close {
-                display: none;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -208,9 +41,13 @@
     <!-- Information Section -->
     <div class="info-section">
         <h2>How to Use the Visualizer</h2>
-        <p>Simply click on the "Open Visualizer" button, and you will be redirected to the app, which is ready to use. Watch the video below for a quick tutorial:</p>
-        <!-- Replace the placeholder with your actual video link or embed code -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+        <p>Simply click on the "Open Visualizer" button, and you will be redirected to the app, which is ready to use.</p>
+        
+        <!-- Video Element -->
+        <video width="560" height="315" controls>
+            <source src="testvideo.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Contact Section -->
