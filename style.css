@@ -546,3 +546,19 @@ body{
       padding: 0;
     }
   }
+  
+        /* Style for the visualizer button */
+        button {
+            padding: 20px 40px; /* Adjust the padding to make the button bigger */
+            font-size: 18px;
+            background-color: #4CAF50; /* Green color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
