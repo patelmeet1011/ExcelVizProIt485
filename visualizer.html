@@ -1,257 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExcelViz Pro - Visualizer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-size: cover;
-            color: #333; /* Dark text color */
-        }
-
-        /* Header styles */
-        .sub-header {
-            background: #292b2c; /* Dark background color */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            background: #292b2c; /* Dark background color */
-            top: 80px;
-            right: -200px;
-            width: 150px;
-            text-align: center;
-            border-radius: 5px;
-            transition: right 0.3s ease-in-out;
-        }
-
-        .nav-links a {
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            display: block;
-        }
-
-        .nav-links a:hover {
-            background: #414243; /* Slightly lighter background color on hover */
-        }
-
-        .fa-bars, .fa-close {
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        /* Visualizer container styles */
-        .visualizer-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh; /* Adjusted height for better visibility */
-            text-align: center;
-            background: url('https://source.unsplash.com/1920x1080/?technology') no-repeat center center fixed;
-        }
-
-        .open-visualizer-btn {
-            cursor: pointer;
-            background: #5cb85c; /* Green color */
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .open-visualizer-btn:hover {
-            background: #4cae4c; /* Darker green color on hover */
-        }
-
-        .button-flare {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            transition: width 0.3s ease-out, height 0.3s ease-out;
-        }
-
-        .open-visualizer-btn:hover .button-flare {
-            width: 200%;
-            height: 450px;
-        }
-
-        /* Information Section styles */
-        .info-section {
-            padding: 30px;
-            text-align: center;
-        }
-
-        /* Contact Section styles */
-        .contact-section {
-            background: #292b2c; /* Dark background color */
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .contact-info div {
-            flex: 1;
-            max-width: 300px;
-        }
-
-        .contact-info i {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        /* Responsive styles */
-        @media only screen and (max-width: 768px) {
-            .nav-links {
-                right: -100%;
-            }
-
-            .fa-bars {
-                display: block;
-            }
-
-            .fa-close {
-                display: none;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExcelViz Pro</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+<script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script> 
 </head>
-
 <body>
-    <!-- Header Section -->
     <section class="sub-header">
         <nav>
             <a href="index.html"><img src="images/logo.png"></a>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links" id="navLinks">  
                 <i class="fa fa-close" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="about.html">OUR TEAM</a></li>
                     <li><a href="visualizer.html">VISUALIZER</a></li>
-                    <li><a href="feedbackform.html">FEEDBACK FORM</a></li>
+                    <li><a href="feedbackform.html">FAQs</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>Spreadsheet Visualizer</h1>
+            <h1>Spreadsheet Visualizer</h1>
     </section>
+    
+    
 
-    <!-- Visualizer Container -->
-    <div class="visualizer-container">
-        <a href="https://excelvizpro1234.streamlit.app/" class="open-visualizer-btn">
-            Open Visualizer
-            <div class="button-flare"></div>
-        </a>
-    </div>
-
-    <!-- Information Section -->
-    <div class="info-section">
-        <h2>How to Use the Visualizer</h2>
-        <p>Simply click on the "Open Visualizer" button, and you will be redirected to the app, which is ready to use. Watch the video below for a quick tutorial:</p>
-        <!-- Replace the placeholder with your actual video link or embed code -->
-        <iframe width="560" height="315" src="testvideo.mov" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p>Email: info@excelvizpro.com</p>
-            </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>Phone: +1 (123) 456-7890</p>
-            </div>
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p>Address: 123 Tech Street, Cityville, USA</p>
-            </div>
-        </div>
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-        </div>
+    
+    <section class="course">
+        <h1>Benfits of our Visualizer</h1>
+        <p>Simplifies Excel data analysis and visualization.<br>Eliminates the need for complex spreadsheet software.<br>Streamlines data transformation and chart creation.<br>Enhances data-driven decision-making.</p>
+        
     </section>
+    
+<!-------- footer ---------->
 
-    <!-- JavaScript for toggle menu -->
-    <script>
-        var navLinks = document.getElementById("navLinks");
+<section class="footer">
+        <h4></h4>
+        <p></p>
+        <div class="icons">
+            <a href="feedbackform.html"><i class="fa fa-facebook"></i></a>
+            <a href="feedbackform.html"><i class="fa fa-twitter"></i></a>
+            <a href="feedbackform.html"><i class="fa fa-instagram"></i></a>
+            <a href="feedbackform.html"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>made by ExcelVix Professionals</p>
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
 
-        function showMenu() {
-            navLinks.classList.add("active");
-        }
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
 
-        function hideMenu() {
-            navLinks.classList.remove("active");
-        }
-    </script>
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>  
+    
 </body>
-
-</html>
+</html>    
