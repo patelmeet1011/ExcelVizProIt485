@@ -359,6 +359,7 @@ h3{
     margin-bottom: 17px;
     outline: none;
     border: 1.5px solid #1a7707;
+    border-radius: 10px;
 }
 
 .footer-link{
