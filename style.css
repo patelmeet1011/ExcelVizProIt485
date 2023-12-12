@@ -281,6 +281,7 @@ h3{
     border: 1px solid #1a7707;
     margin: 50px 0;
     padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .comment-box h3{
@@ -294,6 +295,7 @@ h3{
     border: none;
     outline: none;
     background: #d1cdcd;
+    border-radius: 10px;
 }
 .comment-form button{
     margin: 10px 0;
