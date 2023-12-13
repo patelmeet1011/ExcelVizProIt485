@@ -2,6 +2,6 @@
 
 Link to view website 
 https://patelmeet1011.github.io/ExcelVizProIt485/
-link to app
+Direct link to app
 
-https://excelvizpro1234.streamlit.app/
+https://excelvizproo.streamlit.app/
