@@ -120,14 +120,51 @@
                     <input type="text" placeholder="Enter Name">
                     <input type="email" placeholder="Enter email">
                     <textarea rows="5" placeholder="Your FeedBack"></textarea>
-                    <button type="submit" class="hero-btn red-btn">Send Form</button>
+                    <button type="button" onclick="showPopup()" class="hero-btn red-btn">Send Message</button>
             </form>
         </div>
+        <div id="popup" class="popup-container" style="display: none;">
+          <div class="popup-content">
+              <span class="close-btn" onclick="closePopup()">&times;</span>
+              <p>Thank you for your feedback!</p>
+          </div>
+        </div>
+
+        <script>
+          var navLinks = document.getElementById("navLinks");
+          
+          function showMenu() {
+              navLinks.style.right = "0";
+          }
+      
+          function hideMenu() {
+              navLinks.style.right = "-200px";
+          }
+      
+          // Function to show the popup
+          function showPopup() {
+              var popup = document.getElementById("popup");
+              popup.style.display = "block";
+          }
+      
+          // Function to close the popup
+          function closePopup() {
+              var popup = document.getElementById("popup");
+              popup.style.display = "none";
+          }
+      
+          // Attach an event listener to the form
+          document.getElementById("contactForm").addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent the default form submission
+              showPopup(); // Show the popup
+              // Additional logic for form submission or AJAX request can be added here
+          });
+      </script>
     </div>
         
     </section>
     
-<!-------- footer ---------->
+
 
 <!-------- footer ---------->
 
