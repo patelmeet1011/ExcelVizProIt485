@@ -131,6 +131,32 @@ nav .fa{
     text-align: center;
     padding-top: 30px;
 }
+.course {
+    padding: 20px;
+    text-align: center;
+}
+
+/* styles for responsive video */
+.course video {
+    width: 100%; /* Set video width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1000px; /* Set a maximum width for larger screens if needed */
+}
+
+/* media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .course {
+        padding: 10px;
+    }
+
+    /* Adjust for smaller screens */
+
+    .course h1 {
+        font-size: 24px;
+    }
+
+    
+}
 h1{
     font-size: 36px;
     font-weight: 600;
